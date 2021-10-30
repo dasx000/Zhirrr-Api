@@ -162,7 +162,7 @@ async function cekApiKey(api) {
 router.get('/find', async (req, res, next) => {
   var apikey = req.query.apikey;
   if (!apikey) return res.json(loghandler.notparam);
-  if (apikey != 'zahirgans') return res.json(loghandler.invalidKey);
+  if (apikey != 'diky') return res.json(loghandler.invalidKey);
 
   try {
     zahirr.find().then((result) => {
@@ -232,7 +232,7 @@ router.get('/addapikey', (req, res, next) => {
     )
   )
     return res.json(loghandler.notAddApiKey);
-  if (apikey != 'zahirgans') return res.json(loghandler.invalidKey);
+  if (apikey != 'diky') return res.json(loghandler.invalidKey);
 
   try {
     zahirr
@@ -298,7 +298,7 @@ router.get('/remove', (req, res, next) => {
     )
   )
     return res.json(loghandler.notAddApiKey);
-  if (apikey != 'zahirgans') return res.json(loghandler.invalidKey);
+  if (apikey != 'diky') return res.json(loghandler.invalidKey);
 
   try {
     zahirr
@@ -346,7 +346,7 @@ router.get('/tiktod', async (req, res, next) => {
     url = req.query.url;
 
   if (!apikeyInput) return res.json(loghandler.notparam);
-  if (apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey);
+  if (apikeyInput != 'diky') return res.json(loghandler.invalidKey);
   if (!url) return res.json(loghandler.noturl);
 
   TikTokScraper.getVideoMeta(url, options)
@@ -368,7 +368,7 @@ router.get('/tiktod/stalk', async (req, res, next) => {
     username = req.query.username;
 
   if (!apikeyInput) return res.json(loghandler.notparam);
-  if (apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey);
+  if (apikeyInput != 'diky') return res.json(loghandler.invalidKey);
   if (!username) return res.json(loghandler.notusername);
 
   TikTokScraper.getUserProfileInfo(username)
@@ -392,7 +392,7 @@ router.get('/randomquote', (req, res, next) => {
   var apikey = req.query.apikey;
 
   if (!apikey) return res.json(loghandler.notparam);
-  if (apikey != 'zahirgans') return res.json(loghandler.invalidKey);
+  if (apikey != 'diky') return res.json(loghandler.invalidKey);
 
   fetch(encodeURI(`https://mhankbarbar.tech/api/randomquotes`))
     .then((response) => response.json())
@@ -416,7 +416,7 @@ router.get('/infonpm', async (req, res, next) => {
     host = req.hostname;
 
   if (!apikeyInput) return res.json(loghandler.notparam);
-  if (apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey);
+  if (apikeyInput != 'diky') return res.json(loghandler.invalidKey);
   if (!query)
     return res.json({
       status: false,
@@ -445,7 +445,7 @@ router.get('/short/tiny', async (req, res, next) => {
     url = req.query.url;
 
   if (!apikeyInput) return res.json(loghandler.notparam);
-  if (apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey);
+  if (apikeyInput != 'diky') return res.json(loghandler.invalidKey);
   if (!url) return res.json(loghandler.noturl);
 
   request(
@@ -474,7 +474,7 @@ router.get('/base', async (req, res, next) => {
     decode = req.query.decode,
     apikeyInput = req.query.apikey;
   if (!apikeyInput) return res.json(loghandler.notparam);
-  if (apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey);
+  if (apikeyInput != 'diky') return res.json(loghandler.invalidKey);
   if (!type)
     return res.json({
       status: false,
@@ -533,7 +533,7 @@ router.get('/textmaker', async (req, res, next) => {
     apikeyInput = req.query.apikey;
 
   if (!apikeyInput) return res.json(loghandler.notparam);
-  if (apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey);
+  if (apikeyInput != 'diky') return res.json(loghandler.invalidKey);
   if (!theme) return res.json(loghandler.nottheme);
   if (theme != 'glitch' && theme != 'google-suggestion')
     return res.json(loghandler.notheme);
@@ -642,7 +642,7 @@ router.get('/textmaker/game', async (req, res, next) => {
     apikeyInput = req.query.apikey;
 
   if (!apikeyInput) return res.json(loghandler.notparam);
-  if (apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey);
+  if (apikeyInput != 'diky') return res.json(loghandler.invalidKey);
   if (!theme) return res.json(loghandler.nottheme);
   if (theme != 'pubg' && theme != 'battlefield')
     return res.json(loghandler.notheme);
@@ -750,7 +750,7 @@ router.get('/textmaker/senja', async (req, res, next) => {
     apikeyInput = req.query.apikey;
 
   if (!apikeyInput) return res.json(loghandler.notparam);
-  if (apikeyInput != 'zahirgans') return res.json(loghandler.invalidKey);
+  if (apikeyInput != 'diky') return res.json(loghandler.invalidKey);
   if (!theme) return res.json(loghandler.nottheme);
   if (theme != 'coffee-cup' && theme != 'coffee-cup2')
     return res.json(loghandler.notheme);
