@@ -1,22 +1,31 @@
 var __path = process.cwd(),
-      monk = require('monk'),
-     { color } = require(__path + '/lib/color.js')
+  monk = require('monk'),
+  { color } = require(__path + '/lib/color.js');
 
 // Connection URL
-var url = '';
+var url =
+  'mongodb+srv://diky:B5i4FxSIxxDofhCx@cluster0.je1xa.mongodb.net/first_api?retryWrites=true&w=majority&ssl=true';
 try {
-if(url == '') throw console.log(color('Cek konfigurasi database, var url belum diisi','red'));
+  if (url == '')
+    throw console.log(
+      color('Cek konfigurasi database, var url belum diisi', 'red')
+    );
 } catch (e) {
-	return;
-	}
+  return;
+}
 var db = monk(url);
 
 db.then(() => {
-  console.log(color('Connected correctly to server, ZhirrrGanss','green'))
-})
-.catch ((e) => {
-	console.log(color('Error : '+ e +'\n\nGagal connect ke database, \ncek configurasi database apakah Connection URL sudah benar','red'))
-	})
+  console.log(color('Connected correctly to server, ZhirrrGanss', 'green'));
+}).catch((e) => {
+  console.log(
+    color(
+      'Error : ' +
+        e +
+        '\n\nGagal connect ke database, \ncek configurasi database apakah Connection URL sudah benar',
+      'red'
+    )
+  );
+});
 
-
-module.exports = db
+module.exports = db;
